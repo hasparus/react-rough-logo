@@ -2,19 +2,23 @@
   "name": "react-rough-logo",
   "version": "1.0.0",
   "description": "React logo drawn with rough.js",
-  "keywords": [],
-  "main": "src/index.js",
-  "dependencies": {
-    "react": "16.4.2",
-    "react-dom": "16.4.2",
-    "react-scripts": "1.1.4",
+  "keywords": ["react", "logo", "rough-js", "sketchy"],
+  "main": "src/demo.js",
+  "dependencies": {},
+  "devDependencies": {
+    "react": ">16.4.2",
+    "react-dom": ">16.4.2",
+    "roughjs-es5": "0.1.0",
+    "react-scripts": "1.1.4"
+  },
+  "peerDependencies": {
+    "react": ">16.4.2",
+    "react-dom": ">16.4.2",
     "roughjs-es5": "0.1.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "start:demo": "react-scripts start",
+    "build:demo": "react-scripts build",
     "eject": "react-scripts eject"
   }
 }

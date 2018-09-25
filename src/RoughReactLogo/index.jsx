@@ -34,7 +34,8 @@ const defaultProps = {
   config: defaultConfig,
 };
 
-type Props = typeof defaultProps;
+type Props = typeof defaultProps &
+  React.AllHTMLAttributes<SVGSVGElement>;
 
 class RoughReactLogo extends React.PureComponent<Props> {
   static defaultProps = defaultProps;
@@ -56,16 +57,18 @@ class RoughReactLogo extends React.PureComponent<Props> {
   }
 
   render() {
+    const { style, ...rest } = this.props;
     return (
       <svg
         className={"react-rough-logo"}
         ref={this.svg}
         viewBox="-500 -500 1000 1000"
         style={{
-          position: "absolute",
           height: "100%",
           width: "100%",
+          ...style,
         }}
+        {...rest}
       />
     );
   }
