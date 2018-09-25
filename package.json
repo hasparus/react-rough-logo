@@ -8,13 +8,13 @@
   "devDependencies": {
     "react": ">16.4.2",
     "react-dom": ">16.4.2",
-    "roughjs-es5": "0.1.0",
+    "roughjs": "^2.2.5",
     "react-scripts": "1.1.4"
   },
   "peerDependencies": {
     "react": ">16.4.2",
     "react-dom": ">16.4.2",
-    "roughjs-es5": "0.1.0"
+    "roughjs": "^2.2.5"
   },
   "scripts": {
     "start:demo": "react-scripts start",

@@ -1,5 +1,5 @@
 import React from "react";
-import rough from "roughjs-es5";
+import rough from "roughjs";
 
 import "./styles.css";
 
