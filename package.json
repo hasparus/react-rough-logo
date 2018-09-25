@@ -1,15 +1,23 @@
 {
   "name": "react-rough-logo",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "React logo drawn with rough.js",
-  "keywords": ["react", "logo", "rough-js", "sketchy"],
-  "main": "src/demo.js",
+  "keywords": [
+    "react",
+    "logo",
+    "rough-js",
+    "sketchy"
+  ],
+  "main": "src/demo.ts",
   "dependencies": {},
   "devDependencies": {
+    "@types/react": "^16.4.14",
+    "@types/react-dom": "^16.0.7",
+    "parcel-bundler": "^1.10.0",
     "react": ">16.4.2",
     "react-dom": ">16.4.2",
     "roughjs": "^2.2.5",
-    "react-scripts": "1.1.4"
+    "typescript": "^3.0.3"
   },
   "peerDependencies": {
     "react": ">16.4.2",
@@ -17,8 +25,7 @@
     "roughjs": "^2.2.5"
   },
   "scripts": {
-    "start:demo": "react-scripts start",
-    "build:demo": "react-scripts build",
-    "eject": "react-scripts eject"
+    "start:demo": "parcel ./src/index.html --public-url .",
+    "build:demo": "parcel build ./src/index.html --out-dir docs --public-url ."
   }
 }

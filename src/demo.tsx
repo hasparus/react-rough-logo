@@ -5,10 +5,14 @@ import RoughReactLogo from "./RoughReactLogo";
 
 import "./styles.css";
 
-class App extends React.PureComponent {
-  state = {
-    showReferenceImg: false,
-  };
+const initialState = {
+  showReferenceImg: false,
+};
+
+type State = typeof initialState;
+
+class App extends React.PureComponent<{}, State> {
+  state = initialState;
 
   toggleShowReferenceImg = () => {
     this.setState(({ showReferenceImg }) => ({

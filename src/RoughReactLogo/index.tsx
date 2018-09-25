@@ -2,6 +2,7 @@ import React from "react";
 import rough from "roughjs";
 
 import "./styles.css";
+import { RoughSVG } from "roughjs/bin/svg";
 
 const defaultConfig = {
   roughness: 2,
@@ -11,10 +12,10 @@ type Config = typeof defaultConfig;
 
 function mountShapes(
   svgElement: SVGSVGElement,
-  { config, scale }: { config: Config, scale: number }
+  { config, scale }: { config: Config; scale: number }
 ) {
   svgElement.innerHTML = "";
-  const rc = rough.svg(svgElement);
+  const rc = rough.svg(svgElement) as RoughSVG;
   for (let i = 0; i < 3; i++) {
     svgElement.appendChild(
       rc.ellipse(
@@ -40,17 +41,19 @@ type Props = typeof defaultProps &
 class RoughReactLogo extends React.PureComponent<Props> {
   static defaultProps = defaultProps;
 
-  svg = React.createRef();
+  svg = React.createRef<SVGSVGElement>();
 
   _mountShapes() {
-    mountShapes(this.svg.current, this.props);
+    if (this.svg.current) {
+      mountShapes(this.svg.current, this.props);
+    }
   }
 
   componentDidMount() {
     this._mountShapes();
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps: Props) {
     if (prevProps !== this.props) {
       this._mountShapes();
     }
