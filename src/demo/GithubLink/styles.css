@@ -1,0 +1,8 @@
+.github-link {
+  transition: 200ms;
+  transform: scale(1);
+}
+
+.github-link:hover {
+  transform: scale(1.06);
+}

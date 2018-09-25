@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import RoughReactLogo from "./RoughReactLogo";
+import GithubLink from "./demo/GithubLink";
 
 import "./styles.css";
 
@@ -11,7 +12,7 @@ const initialState = {
 
 type State = typeof initialState;
 
-class App extends React.PureComponent<{}, State> {
+class App extends React.Component<{}, State> {
   state = initialState;
 
   toggleShowReferenceImg = () => {
@@ -29,7 +30,8 @@ class App extends React.PureComponent<{}, State> {
           position: "relative",
           height: "100%",
           width: "100%",
-        }}>
+        }}
+      >
         {showReferenceImg && (
           <section
             style={{
@@ -39,7 +41,8 @@ class App extends React.PureComponent<{}, State> {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-            }}>
+            }}
+          >
             <img
               style={{
                 width: "100%",
@@ -60,10 +63,17 @@ class App extends React.PureComponent<{}, State> {
           style={{
             position: "absolute",
           }}
-          onClick={this.toggleShowReferenceImg}>
+          onClick={this.toggleShowReferenceImg}
+        >
           {showReferenceImg ? "hide" : "show"} reference
           image
         </button>
+        <GithubLink
+          style={{
+            position: "absolute",
+            right: 0,
+          }}
+        />
       </div>
     );
   }
