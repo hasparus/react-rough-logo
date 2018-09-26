@@ -13,6 +13,12 @@ Sketchy react logo created with React and Rough.js
 
 ### Scripts
 
+#### Building library
+
+```
+  yarn build
+```
+
 #### Running demo
 
 ```
