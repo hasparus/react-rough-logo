@@ -8,7 +8,8 @@
     "rough-js",
     "sketchy"
   ],
-  "main": "src/demo.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.4.14",
@@ -25,7 +26,7 @@
     "roughjs": "^2.2.5"
   },
   "scripts": {
-    "start:demo": "parcel ./src/index.html",
-    "build:demo": "parcel build ./src/index.html --out-dir docs --public-url ."
+    "start:demo": "parcel ./src/demo/index.html",
+    "build:demo": "parcel build ./src/demo/index.html --out-dir docs --public-url ."
   }
 }

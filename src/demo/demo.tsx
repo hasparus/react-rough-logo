@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import RoughReactLogo from "./RoughReactLogo";
-import GithubLink from "./demo/GithubLink";
+import RoughReactLogo from "../RoughReactLogo";
+import GithubLink from "./GithubLink";
 
 import "./styles.css";
 
