@@ -8,17 +8,19 @@
     "rough-js",
     "sketchy"
   ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "build/index.cjs.js",
+  "module": "build/index.esm.js",
+  "source": "src/index.tsx",
+  "types": "build/index.d.ts",
   "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
     "parcel-bundler": "^1.9.0",
+    "microbundle": "^0.6.0",
     "react": ">16.4.2",
     "react-dom": ">16.4.2",
-    "roughjs": "^2.2.5",
-    "typescript": "^3.0.3"
+    "roughjs": "^2.2.5"
   },
   "peerDependencies": {
     "react": ">16.4.2",

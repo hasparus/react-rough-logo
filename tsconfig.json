@@ -1,10 +1,15 @@
 {
   "compilerOptions": {
     "jsx": "react",
+    "module": "esnext",
     "noImplicitAny": true,
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": true
+    "lib": ["es6", "dom"],
+    "declaration": true,
+    "declarationDir": "build",
+    "outDir": "build"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["src/demo"]
 }
