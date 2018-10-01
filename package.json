@@ -12,7 +12,9 @@
   "module": "build/index.esm.js",
   "source": "src/index.tsx",
   "types": "build/index.d.ts",
-  "dependencies": {},
+  "dependencies": {
+    "roughjs": "^2.2.5"
+  },
   "devDependencies": {
     "@types/react": "^16.4.14",
     "@types/react-dom": "^16.0.7",
@@ -24,8 +26,7 @@
   },
   "peerDependencies": {
     "react": ">16.4.2",
-    "react-dom": ">16.4.2",
-    "roughjs": "^2.2.5"
+    "react-dom": ">16.4.2"
   },
   "scripts": {
     "build": "microbundle",
