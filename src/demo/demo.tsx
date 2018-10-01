@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import RoughReactLogo from "../RoughReactLogo";
-import GithubLink from "./GithubLink";
+import RoughReactLogo from "../index";
 
+import GithubLink from "./GithubLink";
 import "./styles.css";
 
 const initialState = {

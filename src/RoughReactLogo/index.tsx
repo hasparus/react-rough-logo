@@ -39,6 +39,10 @@ type Props = typeof defaultProps &
   React.AllHTMLAttributes<SVGSVGElement>;
 
 class RoughReactLogo extends React.PureComponent<Props> {
+  static displayName =
+    process.env.NODE_ENV === "production"
+      ? null
+      : "RoughReactLogo";
   static defaultProps = defaultProps;
 
   svg = React.createRef<SVGSVGElement>();
