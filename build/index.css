@@ -1,9 +1,1 @@
-.react-rough-logo > :first-child {
-  -webkit-transform: rotateZ(60deg);
-          transform: rotateZ(60deg);
-}
-
-.react-rough-logo > :nth-child(2) {
-  -webkit-transform: rotateZ(120deg);
-          transform: rotateZ(120deg);
-}
+.react-rough-logo>:first-child{-webkit-transform:rotate(60deg);transform:rotate(60deg)}.react-rough-logo>:nth-child(2){-webkit-transform:rotate(120deg);transform:rotate(120deg)}

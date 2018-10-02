@@ -4,15 +4,37 @@ import rough from "roughjs";
 import "./styles.css";
 import { RoughSVG } from "roughjs/bin/svg";
 
+// https://github.com/pshihn/rough/wiki
+type RoughOptions = {
+  roughness?: number;
+  bowing?: number;
+  stroke?: string;
+  strokeWidth?: number;
+  fill?: string;
+  fillStyle?:
+    | "hachure"
+    | "solid"
+    | "zigzag"
+    | "cross-hatch"
+    | "dots";
+  fillWeight?: number;
+  hachureAngle?: number;
+  hachureGap?: number;
+  curveStepCount?: number;
+  simplification?: number;
+};
+
 const defaultConfig = {
-  roughness: 2,
+  scale: 1.5,
+  ellipsesOptions: { roughness: 2 } as RoughOptions,
+  circleOptions: {} as RoughOptions,
 };
 
 type Config = typeof defaultConfig;
 
 function mountShapes(
   svgElement: SVGSVGElement,
-  { config, scale }: { config: Config; scale: number }
+  { ellipsesOptions, scale }: Config
 ) {
   svgElement.innerHTML = "";
   const rc = rough.svg(svgElement) as RoughSVG;
@@ -23,19 +45,14 @@ function mountShapes(
         0,
         scale * 570,
         scale * 220,
-        defaultConfig
+        ellipsesOptions
       )
     );
   }
   svgElement.appendChild(rc.circle(0, 0, scale * 100));
 }
 
-const defaultProps = {
-  scale: 1.5,
-  config: defaultConfig,
-};
-
-type Props = typeof defaultProps &
+type Props = typeof defaultConfig &
   React.AllHTMLAttributes<SVGSVGElement>;
 
 class ReactRoughLogo extends React.PureComponent<Props> {
@@ -43,7 +60,7 @@ class ReactRoughLogo extends React.PureComponent<Props> {
     process.env.NODE_ENV === "production"
       ? null
       : "RoughReactLogo";
-  static defaultProps = defaultProps;
+  static defaultProps = defaultConfig;
 
   svg = React.createRef<SVGSVGElement>();
 
