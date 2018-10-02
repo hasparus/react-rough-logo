@@ -11,6 +11,13 @@ Sketchy react logo created with React and Rough.js
 [ghpages]: https://hasparus.github.io/react-rough-logo/
 [logo]: ./image.png
 
+### Usage
+
+```
+import ReactLogo from "react-rough-logo";
+import "react-rough-logo/build/index.css";
+```
+
 ### Scripts
 
 #### Building library
