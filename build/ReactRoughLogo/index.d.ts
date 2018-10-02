@@ -7,7 +7,7 @@ declare const defaultProps: {
     };
 };
 declare type Props = typeof defaultProps & React.AllHTMLAttributes<SVGSVGElement>;
-declare class RoughReactLogo extends React.PureComponent<Props> {
+declare class ReactRoughLogo extends React.PureComponent<Props> {
     static displayName: string | null;
     static defaultProps: {
         scale: number;
@@ -21,4 +21,4 @@ declare class RoughReactLogo extends React.PureComponent<Props> {
     componentDidUpdate(prevProps: Props): void;
     render(): JSX.Element;
 }
-export default RoughReactLogo;
+export default ReactRoughLogo;

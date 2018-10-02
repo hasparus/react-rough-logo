@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Built index.esm.js ReactRoughLogo matches snapshot 1`] = `
+<svg
+  class="react-rough-logo"
+  config="[object Object]"
+  scale="1.5"
+  style="height:100%;width:100%"
+  viewBox="-500 -500 1000 1000"
+/>
+`;
+
+exports[`Built index.js ReactRoughLogo matches snapshot 1`] = `
+<svg
+  class="react-rough-logo"
+  config="[object Object]"
+  scale="1.5"
+  style="height:100%;width:100%"
+  viewBox="-500 -500 1000 1000"
+/>
+`;

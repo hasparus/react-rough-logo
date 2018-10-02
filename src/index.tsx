@@ -1,2 +1,2 @@
-export { default } from "./RoughReactLogo";
-export * from "./RoughReactLogo";
+export { default } from "./ReactRoughLogo";
+export * from "./ReactRoughLogo";

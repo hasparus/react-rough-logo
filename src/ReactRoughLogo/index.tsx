@@ -38,7 +38,7 @@ const defaultProps = {
 type Props = typeof defaultProps &
   React.AllHTMLAttributes<SVGSVGElement>;
 
-class RoughReactLogo extends React.PureComponent<Props> {
+class ReactRoughLogo extends React.PureComponent<Props> {
   static displayName =
     process.env.NODE_ENV === "production"
       ? null
@@ -81,4 +81,4 @@ class RoughReactLogo extends React.PureComponent<Props> {
   }
 }
 
-export default RoughReactLogo;
+export default ReactRoughLogo;

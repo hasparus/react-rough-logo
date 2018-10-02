@@ -5,6 +5,7 @@
     "noImplicitAny": true,
     "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "lib": ["es6", "dom"],
     "declaration": true,
     "declarationDir": "build",
