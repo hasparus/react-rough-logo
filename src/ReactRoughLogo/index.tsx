@@ -83,7 +83,13 @@ class ReactRoughLogo extends React.PureComponent<Props> {
   }
 
   render() {
-    const { style, ...rest } = this.props;
+    const {
+      style,
+      scale,
+      ellipsesOptions,
+      circleOptions,
+      ...rest
+    } = this.props;
     return (
       <svg
         className={"react-rough-logo"}
