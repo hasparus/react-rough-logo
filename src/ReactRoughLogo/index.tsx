@@ -34,7 +34,7 @@ type Config = typeof defaultConfig;
 
 function mountShapes(
   svgElement: SVGSVGElement,
-  { ellipsesOptions, scale }: Config
+  { circleOptions, ellipsesOptions, scale }: Config
 ) {
   svgElement.innerHTML = "";
   const rc = rough.svg(svgElement) as RoughSVG;
@@ -49,11 +49,13 @@ function mountShapes(
       )
     );
   }
-  svgElement.appendChild(rc.circle(0, 0, scale * 100));
+  svgElement.appendChild(
+    rc.circle(0, 0, scale * 100, circleOptions)
+  );
 }
 
 type Props = typeof defaultConfig &
-  React.AllHTMLAttributes<SVGSVGElement>;
+  React.SVGProps<SVGSVGElement>;
 
 class ReactRoughLogo extends React.PureComponent<Props> {
   static displayName =
