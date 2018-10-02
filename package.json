@@ -40,7 +40,7 @@
     "react": "^16.5"
   },
   "scripts": {
-    "build": "microbundle",
+    "build": "microbundle --compress false",
     "test": "jest",
     "start:demo": "parcel ./src/demo/index.html",
     "build:demo": "parcel build ./src/demo/index.html --out-dir docs --public-url ."
