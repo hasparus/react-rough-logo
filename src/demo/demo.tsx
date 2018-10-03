@@ -58,6 +58,7 @@ class App extends React.Component<{}, State> {
             position: "absolute",
           }}
           scale={showReferenceImg ? 1 : undefined}
+          className="empty-classname"
         />
         <button
           style={{
