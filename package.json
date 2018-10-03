@@ -1,6 +1,6 @@
 {
   "name": "react-rough-logo",
-  "version": "0.1.0-2",
+  "version": "0.1.0",
   "description": "React logo drawn with rough.js",
   "keywords": [
     "react",
@@ -45,7 +45,7 @@
   "scripts": {
     "build": "microbundle --compress false",
     "test": "jest",
-    "prepublish": "yarn build",
+    "prepublishOnly": "yarn build",
     "start:demo": "parcel ./src/demo/index.html",
     "build:demo": "parcel build ./src/demo/index.html --out-dir docs --public-url ."
   }
