@@ -1,6 +1,6 @@
 {
   "name": "react-rough-logo",
-  "version": "0.1.0-0",
+  "version": "0.1.0-1",
   "description": "React logo drawn with rough.js",
   "keywords": [
     "react",
@@ -15,6 +15,9 @@
   "dependencies": {
     "roughjs": "^2.2.5"
   },
+  "files": [
+    "build"
+  ],
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
