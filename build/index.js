@@ -92,10 +92,10 @@ var ReactRoughLogo = (function (_super) {
         }
     };
     ReactRoughLogo.prototype.render = function () {
-        var _a = this.props, style = _a.style, scale = _a.scale, ellipsesOptions = _a.ellipsesOptions, circleOptions = _a.circleOptions, rest = __rest(_a, ["style",
-            "scale","ellipsesOptions","circleOptions"]);
+        var _a = this.props, style = _a.style, scale = _a.scale, className = _a.className, ellipsesOptions = _a.ellipsesOptions, circleOptions = _a.circleOptions, rest = __rest(_a, ["style",
+            "scale","className","ellipsesOptions","circleOptions"]);
         return React.createElement("svg", __assign({
-            className: "react-rough-logo",
+            className: className ? "react-rough-logo " + className : "react-rough-logo",
             ref: this.svg,
             viewBox: "-500 -500 1000 1000",
             style: __assign({

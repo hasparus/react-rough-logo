@@ -45,6 +45,7 @@
   "scripts": {
     "build": "microbundle --compress false",
     "test": "jest",
+    "prepublish": "yarn build",
     "start:demo": "parcel ./src/demo/index.html",
     "build:demo": "parcel build ./src/demo/index.html --out-dir docs --public-url ."
   }
